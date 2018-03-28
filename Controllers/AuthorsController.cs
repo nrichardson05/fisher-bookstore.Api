@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Fisher.Bookstore.Api.Data;
 using Fisher.Bookstore.Api.Models;
 
 
@@ -91,8 +92,6 @@ namespace Fisher.Bookstore.Api.Controllers
         }
 
        // currentAuthor.Author = newAuthor.Author;
-        currentAuthor.PublishDate = newAuthor.PublishDate;
-        currentAuthor.Publisher = newAuthor.Publisher;
 
         this.db.Authors.Update(currentAuthor);
         this.db.SaveChanges();
